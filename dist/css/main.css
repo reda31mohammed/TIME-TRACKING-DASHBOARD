@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-inline-size: 100%;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+li {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: hsl(226, 43%, 10%);
+  color: #fff;
+  display: grid;
+  padding: 24px;
+}
+
+main {
+  display: grid;
+  align-self: center;
+}
+main .section-one {
+  background: hsl(235, 46%, 20%);
+  border-radius: 0.83rem;
+}
+main .section-one .profile {
+  background: hsl(246, 80%, 60%);
+  display: flex;
+  align-items: center;
+  padding: 1.77rem;
+  margin-bottom: 1.33rem;
+  border-radius: 0.38rem;
+}
+main .section-one .profile img {
+  border-radius: 100%;
+  border: 3px solid #fff;
+  max-width: 64px;
+  max-height: 64px;
+}
+main .section-one .profile .profile-text {
+  margin-left: 1.33rem;
+}
+main .section-one .profile .profile-text p {
+  font-size: 15px;
+  line-height: 1rem;
+  color: hsl(236, 100%, 87%);
+}
+main .section-one .profile .profile-text h1 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 28px;
+  font-weight: 200;
+}
+
+.schedules .periods {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 1.33rem;
+  color: hsl(235, 45%, 61%);
+}
+.schedules .periods .period {
+  font-size: 1rem;
+  line-height: 21px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.schedules .periods .active {
+  color: white;
+}
+
+.section-two {
+  margin-top: 1.77rem;
+}
+.section-two .container {
+  cursor: pointer;
+  z-index: 1;
+  padding-top: 1.77rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.33rem;
+  border-radius: 0.83rem;
+}
+.section-two .container .title-container {
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 0.83rem;
+  border-top-right-radius: 0.83rem;
+  background: hsl(235, 46%, 20%);
+  padding: 1.33rem;
+}
+.section-two .container .title-container h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.16rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.section-two .container .title-container h2:hover {
+  color: hsl(236, 100%, 87%);
+}
+.section-two .container .tracking-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: hsl(235, 46%, 20%);
+  border-bottom-left-radius: 0.83rem;
+  border-bottom-right-radius: 0.83rem;
+  padding: 1.33rem;
+}
+.section-two .container .tracking-container .current {
+  font-size: 1.77rem;
+  font-weight: 200;
+  line-height: 2.1rem;
+}
+.section-two .container .tracking-container .previous {
+  color: hsl(236, 100%, 87%);
+  font-size: 0.83rem;
+  font-weight: 300;
+  line-height: 1rem;
+}
+.section-two .container .activity-img {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 4.33rem;
+  height: 4.33rem;
+  margin-right: 1.33rem;
+  z-index: -1;
+}
+.section-two .work-container {
+  background: hsl(15, 100%, 70%);
+}
+.section-two .play-container {
+  background: hsl(195, 74%, 62%);
+}
+.section-two .study-container {
+  background: hsl(348, 100%, 68%);
+}
+.section-two .exercise-container {
+  background: hsl(145, 58%, 55%);
+}
+.section-two .social-container {
+  background: hsl(264, 64%, 52%);
+}
+.section-two .self-care-container {
+  background: hsl(43, 84%, 65%);
+}
+
+@media (min-width: 40rem) {
+  main {
+    width: 35rem;
+    justify-self: center;
+    margin-top: 10%;
+  }
+  .section-two {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+  }
+  .section-two .container {
+    margin: 0;
+  }
+  .section-two .container .tracking-container {
+    position: relative;
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    width: 62rem;
+    display: flex;
+    justify-content: center;
+  }
+  main .section-one .profile {
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main .section-one .profile .profile-text {
+    margin: 2.22em 1.77em 1.77em 0;
+  }
+  main .section-one .profile .profile-text h1 {
+    font-size: 2.22rem;
+    line-height: 47px;
+  }
+  main .section-one .schedules .periods {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1.77em 0;
+  }
+  main .section-one .schedules .periods .period {
+    font-size: 1rem;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  main .section-one .schedules .periods .period:hover {
+    background: hsl(246, 80%, 60%);
+    color: #fff;
+  }
+  main .section-two {
+    margin: 0 1.77em 0 1.77em;
+  }
+  main .section-two .container {
+    width: 14.17rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}/*# sourceMappingURL=main.css.map */
