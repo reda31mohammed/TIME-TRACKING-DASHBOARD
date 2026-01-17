@@ -1,6 +1,6 @@
 async function timeTrackingData() {
   try {
-    const response = await fetch("../data.json");
+    const response = await fetch("./data.json");
     if (!response.ok) {
       throw new Error("Can't Fetch Data!");
     } else {
